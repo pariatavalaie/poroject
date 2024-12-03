@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "animation.h"
+#include "raylib.h"
 #include "meqdardehi.h"
 int map[17][17]={0};
 
@@ -15,25 +15,20 @@ int main(){
     scanf("%d",&tedadmasdod);
     masdod(tedadmasdod);
     InitWindow(0,0,"MAP");
-   Animation MAQAR=LoadAnimation("C:/Users/ASUS/CLionProjects/untitled4/6.png",6,0.2f);
-   Animation ROSTA= LoadAnimation("C:/Users/ASUS/CLionProjects/untitled4/img.png",2,0.3f);
+
    Texture2D background= LoadTexture("C:/Users/ASUS/CLionProjects/untitled4/img_1.png");
     SetTargetFPS(60);;
     while(!WindowShouldClose()){
         ClearBackground(GRAY);
-        UpdateAnimation(&MAQAR);
-        UpdateAnimation(&ROSTA);
         BeginDrawing();
         ClearBackground(GREEN);
         for (int i = 0;i < 17;i++){
             for (int j = 0; j <17 ; ++j) {
                 if(map[i][j]=='c'){
-                    Vector2 position={i*50,j*50};
-                    DrawAnimation(MAQAR,position);
+
                 }
                 if(map[i][j]=='v'){
                     Vector2 position={i*50,j*50};
-                    DrawAnimation(ROSTA,position);
                 }
             }
 
