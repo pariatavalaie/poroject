@@ -28,7 +28,6 @@ int main(){
 
                 }
                 if(map[i][j]=='v'){
-                    Vector2 position={i*50,j*50};
                 }
             }
 
